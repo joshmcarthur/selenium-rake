@@ -6,10 +6,10 @@ Gem::Specification.new do |s|
   s.name        = "selenium-rake"
   s.version     = Selenium::Rake::VERSION
   s.authors     = ["Chris Holmes"]
-  s.email       = ["ciholmes86@yahoo.co.uk"]
+  s.email       = ["tochrisholmes@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{"Blah"}
-  s.description = %q{"Blah Blah"}
+  s.summary     = %q{"a few rake tasks to run selenium rc server and ui tests"}
+  s.description = %q{"dump test files into tests folder and run rake tasks to test using selenium"}
 
   s.rubyforge_project = "selenium-rake"
 
