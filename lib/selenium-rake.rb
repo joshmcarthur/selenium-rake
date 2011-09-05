@@ -4,7 +4,7 @@ module Selenium
   module Rake
 		
 		def test_method
-			puts "This is a test"
+			puts "This is a test"	
 		end
 		
   end
