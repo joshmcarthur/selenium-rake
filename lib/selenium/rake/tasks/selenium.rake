@@ -24,15 +24,20 @@ selenium_jar_file_path  = "#{File.dirname(__FILE__)}/selenium-2.5.0.jar"
 	# This just calls the run_scripts method below
 	desc "Run all selenium tests"
 		task :"rc:tests" do
-			run_scripts
-		end 
-
-	# This method loads all scripts in the directory
-	def run_scripts
-		Dir['lib/selenium-rc-rake/tests/*.rb'].each do |script|
+		Dir['test/functional/*_selenium.*'].each do |script|
 		# This line allows you to ingnore test files if required
 		next if script.include? 'setup.rb'
 			print "Running #{script}"
 			puts %x[ruby #{script}]
-		end
-	end
+		end			
+		end 
+
+	# This method loads all scripts in the directory
+#	def run_scripts
+	#	Dir['lib/selenium/tests/*.rb'].each do |script|
+		# This line allows you to ingnore test files if required
+		#next if script.include? 'setup.rb'
+			#print "Running #{script}"
+			#puts %x[ruby #{script}]
+	#	end
+	#end
