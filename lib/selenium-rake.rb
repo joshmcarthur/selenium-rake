@@ -1,11 +1,7 @@
-require "selenium-rake/version"
+require "selenium/rake/version"
 
 module Selenium
   module Rake
-		
-		def test_method
-			puts "This is a test"	
-		end
-		
+		require 'selenium/rake/railtie' if defined?(Rails)
   end
 end

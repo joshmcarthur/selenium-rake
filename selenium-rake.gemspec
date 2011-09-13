@@ -1,11 +1,11 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "selenium-rake/version"
+require "selenium/rake/version"
 
 Gem::Specification.new do |s|
   s.name        = "selenium-rake"
   s.version     = Selenium::Rake::VERSION
-  s.authors     = ["Chris Holmes"]
+  s.authors     = ["Chris Holmes", "Michael Parreno-Villa"]
   s.email       = ["tochrisholmes@gmail.com"]
   s.homepage    = ""
   s.summary     = %q{"a few rake tasks to run selenium rc server and ui tests"}
@@ -19,6 +19,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
+   #s.add_development_dependency "selenium/client"
+  s.add_runtime_dependency "selenium-client"
 end
