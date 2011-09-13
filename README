@@ -1,0 +1,36 @@
+Add this to your gemfile.
+
+gem 'selenium-rake'
+
+Run bundle and you will get the following...
+
+RAKE TASKS
+
+To start the selenium rc server.
+
+rake rc
+
+To stop the selenium server.
+
+rake rc:stop
+
+To run all tests in the test/functional folder with _selenium in the filename.
+
+rake rc:tests
+
+GENERATORS
+
+To override the selenium global selenium config settings, this will make the method global_config available in your individual test cases.
+
+rails generate config
+
+To generate an example test that can be found in test/functional
+
+rails generate example
+
+Pull requests, features, improvements, comments and issues are all welcomed...
+
+
+
+
+
