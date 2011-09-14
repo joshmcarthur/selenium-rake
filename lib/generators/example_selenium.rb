@@ -1,7 +1,8 @@
 require "test/unit"
 require "rubygems"
 require "selenium/client"
-#require "lib/selenium_config"
+# require "#{File.dirname(__FILE__)}/selenium_config"
+#require "selenium_config"
 
 class Example < Test::Unit::TestCase
 
@@ -13,12 +14,11 @@ class Example < Test::Unit::TestCase
       :host => "localhost",
       :port => 4444,
       :browser => "*chrome",
-      :url => "http://www.google.co.nz/",
+      :url => "http://www.google.com",
       :timeout_in_second => 60
     @selenium.start_new_browser_session
-    @selenium.set_speed("1000")
-    # rails generate config
-    # Then you can uncomment the line below, require the config above and delete the 7 lines above to use global selenium config found in lib folder
+    @selenium.set_speed('1000')
+    # Uncomment the line below and delete the 7 lines above to use global selenium config
     # global_config
   end
   
@@ -29,12 +29,15 @@ class Example < Test::Unit::TestCase
   
   def test_eg
     @selenium.open "/"
-    @selenium.click "id=lst-ib"
     @selenium.type "id=lst-ib", "selenium"
-    begin
-        assert @selenium.is_text_present("Selenium - Web Browser Automation")
-    rescue Test::Unit::AssertionFailedError
-        @verification_errors << $!
-    end
+    @selenium.click "name=btnG"
+    @selenium.click "link=Selenium - Web Browser Automation"
+    @selenium.wait_for_page_to_load "30000"
+    assert_equal "Selenium - Web Browser Automation", @selenium.get_title
+    @selenium.click "link=Documentation"
+    @selenium.wait_for_page_to_load "30000"
+    @selenium.click "link=Selenium 1 (Selenium RC)"
+    @selenium.wait_for_page_to_load "30000"
   end
+  
 end
