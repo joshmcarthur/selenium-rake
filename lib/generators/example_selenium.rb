@@ -1,7 +1,6 @@
 require "test/unit"
 require "rubygems"
 require "selenium/client"
-#require "#{File.dirname(__FILE__)}/selenium_config"
 #require "lib/selenium_config"
 
 class Example < Test::Unit::TestCase
@@ -17,8 +16,9 @@ class Example < Test::Unit::TestCase
       :url => "http://www.google.co.nz/",
       :timeout_in_second => 60
     @selenium.start_new_browser_session
+    @selenium.set_speed("1000")
     # rails generate config
-    # Then you can uncomment the line below and delete the 7 lines above to use global selenium config found in lib folder
+    # Then you can uncomment the line below, require the config above and delete the 7 lines above to use global selenium config found in lib folder
     # global_config
   end
   

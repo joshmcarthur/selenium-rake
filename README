@@ -2,6 +2,12 @@ Add this to your gemfile.
 
 gem 'selenium-rake'
 
+Only prerequisite is that you need java runtime installed, to check..
+
+java -v 
+
+if not go to http://java.com/en
+
 Run bundle and you will get the following...
 
 RAKE TASKS
