@@ -1,40 +1,58 @@
-Add this to your gemfile.
 
-gem 'selenium-rake'
+                                                                              
+.oPYo.        8               o                   .oPYo.        8             
+8             8                                   8   `8        8             
+`Yooo. .oPYo. 8 .oPYo. odYo. o8 o    o ooYoYo.   o8YooP' .oPYo. 8  .o  .oPYo. 
+    `8 8oooo8 8 8oooo8 8' `8  8 8    8 8' 8  8    8   `b .oooo8 8oP'   8oooo8 
+     8 8.     8 8.     8   8  8 8    8 8  8  8    8    8 8    8 8 `b.  8.     
+`YooP' `Yooo' 8 `Yooo' 8   8  8 `YooP' 8  8  8    8    8 `YooP8 8  `o. `Yooo' 
+:.....::.....:..:.....:..::..:..:.....:..:..:..:::..:::..:.....:..::...:.....:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-Only prerequisite is that you need java runtime installed, to check..
 
-java -v 
+INSTALLATION:
 
-if not go to http://java.com/en
+To install simply add 'selenium-rake' to your Gemfile:
+`gem 'selenium-rake'`
 
-Run bundle and you will get the following...
+...and run `bundle install`
+
+PREREQUISITES
+* The Selenium framework requires a Java runtime to be installed. Run `java -v` in a terminal to see if you have it.
+
+
 
 RAKE TASKS
 
-To start the selenium rc server.
+* `rake rc`: starts the Selenium RC server
+* `rake rc:stop`: stops the Selenium RC server
+* `rake rc:tests`: Run all tests in the test/functional folder with _selenium in the filename
 
-rake rc
 
-To stop the selenium server.
+RUBY ON RAILS GENERATORS
 
-rake rc:stop
+* `rails generate config`: Add a global_config method to your tests to manage Selenium config settings.
+* `rails generate example`: Generate an example Selenium test to help get you started.
 
-To run all tests in the test/functional folder with _selenium in the filename.
 
-rake rc:tests
+LICENSING AND CONTRIBUTION
 
-GENERATORS
+Check out the latest master to make sure the feature hasn’t been implemented or the bug hasn’t been fixed yet
 
-To override the selenium global selenium config settings, this will make the method global_config available in your individual test cases.
+Check out the issue tracker to make sure someone already hasn’t requested it and/or contributed it
 
-rails generate config
+Fork the project
 
-To generate an example test that can be found in test/functional
+Start a feature/bugfix branch
 
-rails generate example
+Commit and push until you are happy with your contribution
 
-Pull requests, features, improvements, comments and issues are all welcomed...
+Make sure to add tests for it. This is important so I don’t break it in a future version unintentionally.
+
+Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+MIT License
 
 
 
